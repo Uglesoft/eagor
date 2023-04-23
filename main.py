@@ -47,7 +47,7 @@ def email_signature_block():
 	c.press(Key.enter)
 	c.release(Key.enter)
 	time.sleep(.1)
-	c.type('Christian Kesler')
+	c.type(os.getenv("MY_NAME"))
 	time.sleep(.1)
 
 	notif_end("email_signature_block")
@@ -109,7 +109,7 @@ def gitlab_auth():
 	time.sleep(.1)
 
 	time.sleep(.5)
-	c.type('christian.kesler')
+	c.type(os.getenv("GITLAB_USERNAME"))
 	time.sleep(.1)
 	c.press(Key.enter)
 	c.release(Key.enter)
@@ -143,7 +143,7 @@ def github_auth():
 	time.sleep(.1)
 
 	time.sleep(.5)
-	c.type('christian-kesler')
+	c.type(os.getenv("GITHUB_USERNAME"))
 	time.sleep(.1)
 	c.press(Key.enter)
 	c.release(Key.enter)
