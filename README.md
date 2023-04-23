@@ -1,92 +1,78 @@
 # Eagor
 
+A keystrokes assistant
 
+## Quickstart
 
-## Getting started
+Assuming you have python and pip installed
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
+```bash
+git clone https://gitlab.com/uglesoft/openware/eagor
+cd eagor
+bash setup
+python3 main.py
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/uglesoft/openware/eagor.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/uglesoft/openware/eagor/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+
+Navigate to a directory of your choosing and execute the following
+
+```bash
+git clone https://gitlab.com/uglesoft/openware/eagor
+```
+
+## Configuration
+
+This program is meant to be cutomizable, I use it for my annoying and frequently changing access tokens to GitHub and GitLab. If you want to use it for something else, modify the code to your heart's content. If you want to use the access key helpers, I recommend adding them to the .env file so you don't commit them into the codebase by accident. Execute the following
+
+```bash
+bash setup
+```
+
+Which will create your .env file for you and install necessary dependencies. Now open the `.env` file, the contents are self explanatory.
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+From the project directory, execute the following:
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+```bash
+python3 main.py`
+```
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+Eagor will start listening for a variety of keystroke patterns, which will be explained in the terminal menu. The output will look something like this:
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+```bash
+Hello. I am your personal keystrokes and hotkeys assistant. Below is a list of commands I currently support.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+	'0+e+s+b': email_signature_block,
+	'0+g+p+w': generate_password,
+	'g+l+a': gitlab_auth,
+	'g+h+a': github_auth,
+	'0+n+s+q': node_sqlite,
+	'0+n+e+a': node_express_api,
+	'0+n+e+r': node_express_routing,
+	'0+n+a+r': node_axios_request,
+	'0+n+p+w': node_parse_while,
+	'0+n+f+e': node_for_each,
+	'n+c+0': node_check_object
+```
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+By pressing these key combinations, the program will activate and output keystrokes to the foreground application. For example, when I press the `0`, `e`, `s`, and `b` keys simultaneously while I have a text editor open and selected, the following is typed out into the text editor:
 
-## License
-For open source projects, say how it is licensed.
+```
+Respectfully,
+Christian Kesler
+```
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+And the content below is printed to the terminal where the program provided the menu and is still listening:
+
+```bash
+email_signature_block function called
+email_signature_block function completed
+```
+
+(note, the listener is blocked by the terminal on some devices)
+
+## Authors
+
+Christian J Kesler, Uglesoft
