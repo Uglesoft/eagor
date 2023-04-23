@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp .env.example .env
+pip install python-dotenv pynput plyer
