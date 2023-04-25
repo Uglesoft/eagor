@@ -1,5 +1,7 @@
 # Eagor
 
+![Eagor Icon](https://raw.githubusercontent.com/Uglesoft/eagor/main/ICON.jpg)
+
 A keystrokes assistant
 
 ## Quickstart
