@@ -473,7 +473,7 @@ def git_push_add():
 	c.release(Key.backspace)
 	time.sleep(.1)
 
-	c.type('git remote set-url --add --push origin')
+	c.type('git remote set-url --add --push origin ')
 
 	print("git_push_add completed")
 
