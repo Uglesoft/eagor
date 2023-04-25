@@ -457,6 +457,27 @@ def node_check_object():
 	print("node_check_object completed")
 
 
+# gpa
+def git_push_add():
+	print("git_push_add function called")
+
+	c.release('g')
+	c.release('p')
+	c.release('a')
+
+	c.press(Key.backspace)
+	c.release(Key.backspace)
+	c.press(Key.backspace)
+	c.release(Key.backspace)
+	c.press(Key.backspace)
+	c.release(Key.backspace)
+	time.sleep(.1)
+
+	c.type('git remote set-url --add --push origin')
+
+	print("git_push_add completed")
+
+
 # hotkeys
 hotkeys = {
 	'0+e+s+b': email_signature_block,
@@ -469,7 +490,8 @@ hotkeys = {
 	'0+n+a+r': node_axios_request,
 	'0+n+p+w': node_parse_while,
 	'0+n+f+e': node_for_each,
-	'n+c+0': node_check_object
+	'n+c+0': node_check_object,
+	'g+p+a': git_push_add
 }
 
 
@@ -486,7 +508,8 @@ print("""
 	'0+n+a+r': node_axios_request,
 	'0+n+p+w': node_parse_while,
 	'0+n+f+e': node_for_each,
-	'n+c+0': node_check_object
+	'n+c+0': node_check_object,
+	'g+p+a': git_push_add
 """)
 
 
