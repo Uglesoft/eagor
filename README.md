@@ -75,6 +75,15 @@ email_signature_block function completed
 
 (note, the listener is blocked by the terminal on some devices)
 
-## Authors
+## Support
 
-Christian J Kesler, Uglesoft
+Reach out to uglesoft at `uglesoft@gmail.com`
+
+## Author(s)
+
+Christian J Kesler, Uglesoft Openware &copy;
+ 
+### Acknowledgements
+
+As always, I have ChatGPT to thank for helping me walk through my thought process and teach me new things as I go.  
+
